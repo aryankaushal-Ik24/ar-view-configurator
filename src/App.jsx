@@ -60,17 +60,6 @@ function App() {
   const isMobile = isMobileDevice();
   const [isLoading, setIsLoading] = useState(true);
   const [arView, setArView] = useState(false);
-
-  // Import model-viewer web component
-  useEffect(() => {
-    if (!document.querySelector('script[src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"]')) {
-      const script = document.createElement('script');
-      script.src = 'https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js';
-      script.type = 'module'; // ✅ this is valid for model-viewer
-      document.head.appendChild(script);
-    }
-  }, []);
-  
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);

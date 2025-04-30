@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 import { ConfigurationProvider } from './context/Configuration';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>  
+    <BrowserRouter>  
       <ConfigurationProvider>
         <App />
       </ConfigurationProvider>
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
